@@ -6874,10 +6874,10 @@ function sFLY(vfly)
 		BG.P = 9e4
 		BG.Parent = T
 		BV.Parent = T
-		BG.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+		BG.maxTorque = Vector3.new(math.huge, math.huge, math.huge)
 		BG.cframe = T.CFrame
 		BV.velocity = Vector3.new(0, 0, 0)
-		BV.maxForce = Vector3.new(9e9, 9e9, 9e9)
+		BV.maxForce = Vector3.new(math.huge, math.huge, math.huge)
 		task.spawn(function()
 			repeat wait()
 				if not vfly and Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
