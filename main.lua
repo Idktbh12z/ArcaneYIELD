@@ -12658,21 +12658,6 @@ end
 IYMouse.Move:Connect(checkTT)
 
 task.spawn(function()
-    local success, latestVersionInfo = pcall(function()
-        local versionJson = game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/version', true) -- Use `true` for HTTPS
-        return HttpService:JSONDecode(versionJson)
-    end)
-
-    if success and latestVersionInfo then
-        if currentVersion ~= latestVersionInfo.Version then
-            --print("Outdated: Get the new version at infyiff.github.io") -- Replace this with your notification system
-        end
-    else
-        --warn("Failed to fetch version info: " .. tostring(latestVersionInfo))
-    end
-end)
-
-task.spawn(function()
 	wait()
 	Credits:TweenPosition(UDim2.new(0, 0, 0.9, 0), "Out", "Quart", 0.2)
 	Logo:TweenSizeAndPosition(UDim2.new(0, 175, 0, 175), UDim2.new(0, 37, 0, 45), "Out", "Quart", 0.3)
