@@ -6861,8 +6861,11 @@ function sFLY(vfly)
 
 	local function FLY()
 		FLYING = true
+		local String = randomString()
 		local BG = Instance.new('BodyGyro')
 		local BV = Instance.new('BodyVelocity')
+		BG.Name = String
+		BV.Name = String
 		BG.P = 9e4
 		BG.Parent = T
 		BV.Parent = T
