@@ -7038,30 +7038,6 @@ addcmd('fly',{},function(args, speaker)
 	if not IsOnMobile then
 		NOFLY()
 		wait()
-		sFLY()
-	else
-		mobilefly(speaker)
-	end
-	if args[1] and isNumber(args[1]) then
-		iyflyspeed = args[1]
-	end
-end)
-
-addcmd('flyspeed',{'flysp'},function(args, speaker)
-	local speed = args[1] or 1
-	if isNumber(speed) then
-		iyflyspeed = speed
-	end
-end)
-
-addcmd('unfly',{'nofly','novfly','unvehiclefly','novehiclefly','unvfly'},function(args, speaker)
-	if not IsOnMobile then NOFLY() else unmobilefly(speaker) end
-end)
-
-addcmd('vfly',{'vehiclefly'},function(args, speaker)
-	if not IsOnMobile then
-		NOFLY()
-		wait()
 		sFLY(true)
 	else
 		mobilefly(speaker, true)
@@ -7071,19 +7047,15 @@ addcmd('vfly',{'vehiclefly'},function(args, speaker)
 	end
 end)
 
-addcmd('togglevfly',{},function(args, speaker)
-	if FLYING then
-		if not IsOnMobile then NOFLY() else unmobilefly(speaker) end
-	else
-		if not IsOnMobile then sFLY(true) else mobilefly(speaker, true) end
-	end
-end)
-
-addcmd('vflyspeed',{'vflysp','vehicleflyspeed','vehicleflysp'},function(args, speaker)
+addcmd('flyspeed',{'flysp'},function(args, speaker)
 	local speed = args[1] or 1
 	if isNumber(speed) then
 		vehicleflyspeed = speed
 	end
+end)
+
+addcmd('unfly',{'nofly','novfly','unvehiclefly','novehiclefly','unvfly'},function(args, speaker)
+	if not IsOnMobile then NOFLY() else unmobilefly(speaker) end
 end)
 
 addcmd('qefly',{'flyqe'},function(args, speaker)
