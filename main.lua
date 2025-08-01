@@ -17,7 +17,7 @@ if not game:IsLoaded() then
     notLoaded:Destroy()
 end
 
-currentVersion = "6.3.3"
+currentVersion = "6.3.4"
 
 ScaledHolder = Instance.new("Frame")
 Scale = Instance.new("UIScale")
@@ -4389,7 +4389,7 @@ CMDs[#CMDs + 1] = {NAME = 'unnoclip / clip', DESC = 'Disables noclip'}
 -- CMDs[#CMDs + 1] = {NAME = 'flyspeed [num]', DESC = 'Set fly speed (default is 20)'}
 CMDs[#CMDs + 1] = {NAME = 'fly / fly [speed]', DESC = 'Makes you fly in a vehicle'}
 CMDs[#CMDs + 1] = {NAME = 'fly / unfly', DESC = 'Disables vehicle fly'}
-CMDs[#CMDs + 1] = {NAME = 'vehicleflyspeed  / vflyspeed [num]', DESC = 'Set vehicle fly speed'}
+CMDs[#CMDs + 1] = {NAME = 'flyspeed  / flyspeed [num]', DESC = 'Set vehicle fly speed'}
 CMDs[#CMDs + 1] = {NAME = 'cframefly / cfly [speed]', DESC = 'Makes you fly, bypassing some anti cheats (works on mobile)'}
 CMDs[#CMDs + 1] = {NAME = 'uncframefly / uncfly', DESC = 'Disables cfly'}
 CMDs[#CMDs + 1] = {NAME = 'cframeflyspeed  / cflyspeed [num]', DESC = 'Sets cfly speed'}
@@ -6878,7 +6878,7 @@ function sFLY(vfly)
 				if not vfly and Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
 					Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').PlatformStand = true
 				end
-				if Players.LocalPlayer.Character:FindFirstChild("WaterVelocity") then Players.LocalPlayer.Character:FindFirstChild("WaterVelocity"):Destroy() end
+				if getRoot:FindFirstChild("WaterVelocity") then getRoot:FindFirstChild("WaterVelocity"):Destroy() end
 				if CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 or CONTROL.Q + CONTROL.E ~= 0 then
 					SPEED = 50
 				elseif not (CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 or CONTROL.Q + CONTROL.E ~= 0) and SPEED ~= 0 then
