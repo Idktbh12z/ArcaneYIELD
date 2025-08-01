@@ -6878,7 +6878,7 @@ function sFLY(vfly)
 				if not vfly and Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
 					Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').PlatformStand = true
 				end
-				if getRoot:FindFirstChild("WaterVelocity") then getRoot:FindFirstChild("WaterVelocity"):Destroy() end
+				if getRoot(Players.LocalPlayer.Character):FindFirstChild("WaterVelocity") then getRoot(Players.LocalPlayer.Character):FindFirstChild("WaterVelocity"):Destroy() end
 				if CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 or CONTROL.Q + CONTROL.E ~= 0 then
 					SPEED = 50
 				elseif not (CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 or CONTROL.Q + CONTROL.E ~= 0) and SPEED ~= 0 then
